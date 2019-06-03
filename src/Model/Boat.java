@@ -1,6 +1,6 @@
 package Model;
 
-public class Boat extends Vehicle {
+public class Boat extends Vehicle implements Cloneable {
 	private String name;
 	private String type;
 	private int length;
@@ -34,6 +34,11 @@ public class Boat extends Vehicle {
 
 	public int getLength() {
 		return length;
+	}
+
+	@Override
+	public Boat clone() throws CloneNotSupportedException {
+		return (Boat) super.clone();
 	}
 
 	@Override

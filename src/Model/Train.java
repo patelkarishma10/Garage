@@ -1,6 +1,6 @@
 package Model;
 
-public class Train extends Vehicle {
+public class Train extends Vehicle implements Cloneable {
 	private int numberOfCarriges;
 	private String trainline;
 
@@ -24,6 +24,11 @@ public class Train extends Vehicle {
 
 	public String getTrainline() {
 		return trainline;
+	}
+
+	@Override
+	public Train clone() throws CloneNotSupportedException {
+		return (Train) super.clone();
 	}
 
 	@Override

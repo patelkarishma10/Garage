@@ -14,6 +14,15 @@ public class Runner {
 		Car smallCar = new Car("blue", "kia", "rio", 5);
 		Train southernTrain = new Train("green", "bullet", "po009", 8, "southern rail");
 		Garage vl1 = new Garage();
+		System.out.println(rowboat);
+		Boat rowboat2 = null;
+		try {
+			rowboat2 = rowboat.clone();
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		vl1.addVehicleToList(rowboat2);
 		vl1.addVehicleToList(rowboat);
 		vl1.addVehicleToList(smallCar);
 		vl1.addVehicleToList(southernTrain);
